@@ -1,0 +1,186 @@
+* {
+    /* '*' tüm öğeleri kapsayan anlamındadır */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+    /*1.6rem kullanmanın amacı : 
+    hmtl kısmında verdiğimiz 10px değiştiğinde 1.6 katı 
+    kadar artmasını sağlar her defasında teker teker
+     uğraşmamıza gerek kalmaz*/
+    line-height: 1.5;
+    /*Satır aralarında ki mesafeyi ayarlamada kullanılır*/
+    text-align: center;
+    /* body içeriğini ortalar */
+    background-color: #333;
+    /*arka plan rengini belirler*/
+}
+
+html {
+
+    font-size: 7px;
+}
+
+a {
+    text-decoration: none;
+    /*link altında oluşan çizgiyi yok eder*/
+    color: chartreuse;
+}
+
+p {
+    padding: 1.6rem 0;
+    /* ikinci "0"ın anlamı sadece aşşadan ve üstten padding olsun diyedir.*/
+}
+
+img{
+    width: 100%;
+    height: auto; /*en-boy oranı olduğu ve resim bozulmasın
+     diye height=auto olarak tanımlanır */
+
+}
+
+.clearfix::after{
+    /*boş bir eleman oluşturup onun yok olmasını istiyoruz*/
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+header {
+    height: 46rem;
+
+}
+
+header .bg-image {
+    position: absolute;
+    background-image: url(images/kumsal.webp);
+    /*yazı arkası resim için yapılır*/
+    background-size: cover;
+    background-position: center;
+    height: 46rem;
+    width: 100%;
+    opacity: 0.9;
+    /*Solgunluk değerini ayarlamak için kullanılır*/
+    z-index: -1; 
+    /* Resim üzerinde bulunan yazıları 
+    ve işlevleri ön plana cıkarır. */
+
+
+}
+
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+.btn { /*buton oluşturmaya yarıyor*/
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0;
+    transition: all 0.4s;
+    /* buton üzerine gelindiğinde renk değişiminin daha 
+    soft ve yavaş şekilde değişmesini sağlar*/
+
+}
+
+.btn:hover {/*mouse ile üzerine gelindiğinde gerçekleşicek
+    değişiklikler belirtilir "hover" özelliği sayesinde*/
+    background-color: #fff;
+    color: #333;
+}
+
+#section-a{
+    background-color: #fff;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+#section-b{
+    padding: 2rem;
+}
+
+#section-b ul{
+    list-style: none;
+    /* madde işaretlerini yoketmek için kullanılır.*/
+}
+
+#section-b li{
+    list-style: none;
+    background: #fff;
+    color: #333;
+    margin-bottom:  1.5rem;
+    
+    /*section a ve b arasında 1.5rem'lik boşluk bırakmış
+    olduk.*/
+}
+
+.col_content{
+    padding: 1.5rem;
+}
+
+#section-c{
+    background-color: #fff;
+    color: #333;
+    padding: 5rem;
+}
+
+#section-d .box{
+    padding: 5rem;
+    
+}
+
+#section-d i{
+    color: #aeaeae;
+}
+
+#section-d .box:first-child{
+    background-color: darkslategray;
+}
+
+footer{
+    background-color: black;
+    padding: 5rem;
+}
+
+footer a{
+    color: greenyellow;
+}
+
+@media screen and (min-width:800px) {
+    html{
+        font-size: 9px;
+    }
+
+    
+    
+}
+
+@media screen and (min-width:1200px) {
+    html{
+        font-size: 11px;
+    }
+
+    #section-b li{
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+
+    }
+
+    .box{
+        width: 50%;
+        float: left;
+    }
+    
+}
